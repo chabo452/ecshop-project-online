@@ -1,0 +1,11 @@
+﻿body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #fff;
+  color: #000;
+}
+header, footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
