@@ -1,1 +1,11 @@
-{ "theme": "apple", "version": "1.0.0" }
+﻿{
+  "siteTitle": "ECショップサポート",
+  "author": "野口慧",
+  "year": 2025,
+  "theme": "apple",
+  "features": {
+    "lp": true,
+    "pitch": true,
+    "analytics": false
+  }
+}

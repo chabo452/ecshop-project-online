@@ -1,12 +1,8 @@
 ﻿# ecshop-project-online
 
-## ディレクトリ構成
-- lp/index.html：LPページ
-- pitch/index.html：プレゼン資料（reveal.js）
-- styles/app.css：Apple風デザイン
-- data/products.csv：商品CSVテンプレート
+このプロジェクトは、ECショップの支援用のプレゼンテーション資料（pitch）、LP、関連リソースを一括生成するためのものです。
 
-## デプロイ手順
-1. PowerShell を管理者で実行
-2. gh-pages にブランチを切り替え（GitHub）
-3. GitHub Pages を root に設定
+- Reveal.js を利用したスライド資料
+- Apple風のシンプルLP
+- GitHub Pages 用の構成
+- 自動生成スクリプトによる管理

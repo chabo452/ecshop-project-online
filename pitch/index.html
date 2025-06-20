@@ -1,26 +1,45 @@
 ﻿<!doctype html>
-<html lang='ja'>
+<html lang="ja">
 <head>
-  <meta charset='utf-8'>
-  <title>ECプロジェクト プレゼン資料</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <link rel='stylesheet' href='../reveal.js/dist/reveal.css'>
-  <link rel='stylesheet' href='../reveal.js/dist/theme/black.css' id='theme'>
-  <link rel='stylesheet' href='../styles/app.css'>
+  <meta charset="utf-8" />
+  <title>提案スライド</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="../reveal.js/dist/theme/white.css" />
 </head>
 <body>
-  <div class='reveal'>
-    <div class='slides'>
-      <!-- Markdown スライド読み込み -->
-      <section data-markdown='slides.md' data-separator='^\n---\n' data-separator-vertical='^\n--\n' data-separator-notes='^Note:' data-charset='utf-8'></section>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="slides.md" data-separator="^---" data-separator-vertical="^--" data-separator-notes="^Note:" data-charset="utf-8"></section>
+<section>
+  <h2>コストシミュレーション</h2>
+  <input type='checkbox' class='cost' data-cost='60000' checked> モデル撮影（¥60,000）<br>
+  <input type='checkbox' class='cost' data-cost='80000' checked> 動画制作（¥80,000）<br>
+  <input type='checkbox' class='cost' data-cost='30000' checked> SNS運用（¥30,000）<br>
+  <hr>
+  <strong>合計金額：<span id='total'>¥170,000</span></strong>
+
+  <script>
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll('.cost').forEach(cb => {
+        if (cb.checked) total += parseInt(cb.dataset.cost);
+      });
+      document.getElementById('total').textContent = ¥;
+    }
+    document.querySelectorAll('.cost').forEach(cb => cb.addEventListener('change', updateTotal));
+    updateTotal();
+  </script>
+</section>
     </div>
   </div>
-  <script src='../reveal.js/dist/reveal.js'></script>
-  <script src='../reveal.js/plugin/markdown/markdown.js'></script>
+  <script src="../reveal.js/dist/reveal.js"></script>
+  <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="../reveal.js/plugin/highlight/highlight.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
-      plugins: [ RevealMarkdown ]
+      plugins: [ RevealMarkdown, RevealHighlight ]
     });
   </script>
 </body>
