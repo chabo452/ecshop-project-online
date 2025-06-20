@@ -1,11 +1,41 @@
 ﻿body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   background-color: #fff;
-  color: #000;
+  color: #333;
 }
-header, footer {
-  text-align: center;
-  margin-bottom: 2rem;
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #0070c9;
+}
+
+a {
+  color: #0070c9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+button {
+  background-color: #0070c9;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ea3;
 }

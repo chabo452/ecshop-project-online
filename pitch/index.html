@@ -1,22 +1,27 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang='ja'>
 <head>
-  <meta charset="utf-8">
-  <title>ECプレゼン</title>
-  <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="../reveal.js/dist/theme/white.css">
+  <meta charset='utf-8'>
+  <title>ECプロジェクト プレゼン資料</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='../reveal.js/dist/reveal.css'>
+  <link rel='stylesheet' href='../reveal.js/dist/theme/black.css' id='theme'>
+  <link rel='stylesheet' href='../styles/app.css'>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-      <section>ようこそ</section>
-      <section data-markdown="slides.md" data-separator="^\n\n\n" data-charset="utf-8"></section>
+  <div class='reveal'>
+    <div class='slides'>
+      <!-- Markdown スライド読み込み -->
+      <section data-markdown='slides.md' data-separator='^\n---\n' data-separator-vertical='^\n--\n' data-separator-notes='^Note:' data-charset='utf-8'></section>
     </div>
   </div>
-  <script src="../reveal.js/dist/reveal.js"></script>
-  <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+  <script src='../reveal.js/dist/reveal.js'></script>
+  <script src='../reveal.js/plugin/markdown/markdown.js'></script>
   <script>
-    Reveal.initialize({ plugins: [ RevealMarkdown ] });
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown ]
+    });
   </script>
 </body>
 </html>
