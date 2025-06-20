@@ -9,11 +9,13 @@
 </head>
 <body>
 <div class="reveal"><div class="slides">
+
 <section>
   <h1>ECショップ支援 お品書き</h1>
   <p>必要な項目にチェックを入れて構成。リアルタイムで合計金額が表示されます。</p>
 </section>
-<section>
+
+<section style="overflow-y:auto; max-height:80vh;">
   <h2>選択式サポート項目</h2>
   <form>
     <label><input type="checkbox" class="cost" data-cost="60000" checked> モデル撮影（¥60,000）</label><br>
@@ -36,9 +38,11 @@
   <hr>
   <strong>合計金額：<span id="total">¥0</span></strong>
 </section>
+
 <section>
   <p>© 2025 ECショップサポート</p>
 </section>
+
 </div></div>
 <script src="../reveal.js/dist/reveal.js"></script>
 <script>
@@ -46,7 +50,7 @@
   function updateTotal() {
     let t = 0;
     document.querySelectorAll(".cost").forEach(cb => {
-      if (cb.checked) { t += parseInt(cb.dataset.cost) || 0; }
+      if (cb.checked) t += parseInt(cb.dataset.cost) || 0;
     });
     document.getElementById("total").textContent = "¥" + t.toLocaleString();
   }
