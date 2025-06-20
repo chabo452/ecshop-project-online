@@ -1,32 +1,45 @@
 ﻿<!DOCTYPE html>
-<html lang='ja'>
+<html lang="ja">
 <head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1' />
-  <title>ECショップ サポートプラン</title>
-  <link rel='stylesheet' href='../styles/app.css' />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECサポートプラン</title>
+  <link rel="stylesheet" href="../styles/app.css">
 </head>
 <body>
-  <header>
-    <h1>ECショップ サポートプラン</h1>
-  </header>
-  <main>
-    <section>
-      <h2>最適なパッケージをお届けします</h2>
-      <p>あなたのEC事業の成功を徹底支援！</p>
-    </section>
-    <section>
-      <h2>プラン一覧</h2>
-      <ul>
-        <li>ミニマムプラン - ¥100,000〜</li>
-        <li>ベーシックプラン - ¥200,000〜</li>
-        <li>映像付きプラン - ¥300,000〜</li>
-        <li>フルサポートプラン - ¥800,000〜</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <small>© 2025 ECショップサポート</small>
-  </footer>
+  <h1>ECショップ サポートプラン</h1>
+  <p>あなたのEC事業の成功を徹底支援します。</p>
+
+  <h2>サブスクリプションプラン</h2>
+  <ul>
+    <li><strong>A. そこそこおまとめプラン</strong>（¥150,000/月） - 撮影＋登録＋SNS</li>
+    <li><strong>B. 得得おまとめプラン</strong>（¥200,000/月） - 上記＋広告＋分析</li>
+    <li><strong>C. フルコミットプラン</strong>（¥300,000/月） - 上記＋EC代行＋在庫連携</li>
+  </ul>
+
+  <h2>カスタム構成</h2>
+  <form>
+    <label><input type="checkbox" class="cost" data-cost="60000" checked> モデル撮影（¥60,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="80000" checked> 動画制作（¥80,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="30000" checked> 工場紹介（¥30,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="40000" checked> Shopify登録（¥40,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="25000" checked> SNS運用（¥25,000）</label><br>
+    <hr>
+    <strong>合計金額：<span id="total">¥0</span></strong>
+  </form>
+
+  <script>
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll('.cost').forEach(cb => {
+        if (cb.checked) total += parseInt(cb.dataset.cost);
+      });
+      document.getElementById('total').textContent = ¥;
+    }
+    document.querySelectorAll('.cost').forEach(cb => cb.addEventListener('change', updateTotal));
+    updateTotal();
+  </script>
+
+  <footer><p>&copy; 2025 ECショップサポート</p></footer>
 </body>
 </html>
