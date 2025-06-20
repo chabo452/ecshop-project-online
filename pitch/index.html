@@ -11,16 +11,26 @@
 <div class='reveal'><div class='slides'>
 
 <section>
-  <h1>ECショップ サポートプラン</h1>
-  <p>あなたのEC事業の成功を徹底支援します。</p>
+  <h1>ECショップ支援とは？</h1>
+  <p>初めてのEC立ち上げに必要な準備、仕組み、販売戦略まで一括支援します。</p>
+</section>
+
+<section>
+  <h2>導入から運用までの支援フェーズ</h2>
+  <ol>
+    <li>商品準備（撮影、登録）</li>
+    <li>ECサイト構築（Shopify設定、デザイン）</li>
+    <li>販売導線設計（SNS・動画・工場紹介）</li>
+    <li>運用支援（在庫・決済連携、広告、データ分析）</li>
+  </ol>
 </section>
 
 <section>
   <h2>サブスクリプションプラン</h2>
   <ul>
-    <li>A. そこそこおまとめプラン（¥150,000/月）- 撮影＋登録＋SNS</li>
-    <li>B. 得得おまとめプラン（¥200,000/月）- 上記＋広告＋分析</li>
-    <li>C. フルコミットプラン（¥300,000/月）- 上記＋EC代行＋在庫連携</li>
+    <li>A. そこそこおまとめプラン（¥150,000/月） - 撮影＋登録＋SNS</li>
+    <li>B. 得得おまとめプラン（¥200,000/月） - 上記＋広告＋分析</li>
+    <li>C. フルコミットプラン（¥300,000/月） - 上記＋EC代行＋在庫連携</li>
   </ul>
 </section>
 
@@ -54,7 +64,6 @@
 </section>
 
 </div></div>
-
 <script src='../reveal.js/dist/reveal.js'></script>
 <script>
   Reveal.initialize();
@@ -65,8 +74,7 @@
     });
     document.getElementById('total').textContent = '¥' + t.toLocaleString();
   }
-  document.querySelectorAll('.cost').forEach(cb =>
-    cb.addEventListener('change', updateTotal));
+  document.querySelectorAll('.cost').forEach(cb => cb.addEventListener('change', updateTotal));
   updateTotal();
 </script>
 </body>
