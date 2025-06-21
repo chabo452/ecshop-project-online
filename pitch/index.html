@@ -26,26 +26,34 @@
         <h1>ECショップ支援 構成ガイド</h1>
         <p>必要な項目にチェックを入れて構成。リアルタイムで合計金額が表示されます。</p>
       </section>
-      <section>
-        <h2>選択式サポート項目</h2>
-        <form> <label><input type="checkbox" class="cost" data-cost="60000" checked> モデル撮影（¥60,000）</label><br>
-          <label><input type="checkbox" class="cost" data-cost="80000" checked> 動画制作（¥80,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="30000" checked> 工場紹介（¥30,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="40000" checked> Shopify登録（¥40,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="25000" checked> SNS運用（¥25,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="20000" checked> スクウェアターミナル管理（¥20,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="50000" checked> 商品登録システム化（¥50,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="40000" checked> CSV加工・自動化対応（¥40,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="30000" checked> 売上ボタン共有機能（¥30,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="50000" checked> メールマーケティング（¥50,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="30000" checked> 顧客サポート（¥30,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="40000" checked> データ分析（¥40,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="60000" checked> SEO／コンテンツ（¥60,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="30000" checked> リピート施策（¥30,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="70000" checked> 物流代行（¥70,000）</label><br> <label><input
-              type="checkbox" class="cost" data-cost="0" checked> 広告運用（5〜15%広告費・応相談）</label><br> </form>
-        <hr> <strong>合計金額：<span id="total">¥0</span></strong>
-      </section>
+      <section style="position: relative;">
+  <h2>選択式サポート項目</h2>
+
+  <!-- スクロール可能なフォーム領域 -->
+  <form style="max-height: 65vh; overflow-y: auto; padding-bottom: 3em; margin-bottom: 0;">
+    <label><input type="checkbox" class="cost" data-cost="60000" checked> モデル撮影（¥60,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="80000" checked> 動画制作（¥80,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="30000" checked> 工場紹介（¥30,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="40000" checked> Shopify登録（¥40,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="25000" checked> SNS運用（¥25,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="20000" checked> スクウェアターミナル管理（¥20,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="50000" checked> 商品登録システム化（¥50,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="40000" checked> CSV加工・自動化対応（¥40,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="30000" checked> 売上ボタン共有機能（¥30,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="50000" checked> メールマーケティング（¥50,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="30000" checked> 顧客サポート（¥30,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="40000" checked> データ分析（¥40,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="60000" checked> SEO／コンテンツ（¥60,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="30000" checked> リピート施策（¥30,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="70000" checked> 物流代行（¥70,000）</label><br>
+    <label><input type="checkbox" class="cost" data-cost="0" checked> 広告運用（5〜15%広告費・応相談）</label><br>
+  </form>
+
+  <!-- Stickyな合計金額表示 -->
+  <div id="total-container" style="position: sticky; bottom: 0; background: white; padding: 10px 0; font-weight: bold; font-size: 1.2em; border-top: 1px solid #ccc; z-index: 10;">
+    合計金額：<span id="total">¥0</span>
+  </div>
+</section>
       <section>
         <h2>サブスクリプションプラン</h2>
         <ul>
