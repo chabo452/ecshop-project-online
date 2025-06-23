@@ -49,8 +49,8 @@
     <label><input type="checkbox" class="cost" data-cost="0" checked> 広告運用（5〜15%広告費・応相談）</label><br>
   </form>
 
-  <!-- Stickyな合計金額表示 -->
-  <div id="total-container" style="position: sticky; bottom: 0; background: white; padding: 10px 0; font-weight: bold; font-size: 1.2em; border-top: 1px solid #ccc; z-index: 10;">
+  <!-- Stickyな合計金額表示（白い線バグ対策済み） -->
+  <div id="total-container">
     合計金額：<span id="total">¥0</span>
   </div>
 </section>
@@ -61,6 +61,35 @@
           <li><strong>B. 得得おまとめプラン（¥200,000/月）</strong> - 上記＋広告＋分析</li>
           <li><strong>C. フルコミットプラン（¥300,000/月）</strong> - 上記＋EC代行＋在庫連携</li>
         </ul>
+      </section>
+      <section>
+        <h2>支援スタイル比較チャート</h2>
+        <div class="scrollable-table">
+          <table style="font-size: 0.8em; width: 100%; margin-bottom: 1em;">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>一般的な外注</th>
+                <th>私たちの支援</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>戦略設計</td><td>基本なし</td><td>ゴールから逆算して提案</td></tr>
+              <tr><td>業務の範囲</td><td>パーツ単位で分断</td><td>EC〜SNS〜資料まで一貫対応</td></tr>
+              <tr><td>提案内容</td><td>デザイン・実装中心</td><td>市場設計＋価格設計まで</td></tr>
+              <tr><td>継続運用</td><td>別契約・高額</td><td>ノーコード活用＋自走型構築</td></tr>
+              <tr><td>モチベーション</td><td>クライアント任せ</td><td>クライアントを動機づける</td></tr>
+              <tr><td>成果志向</td><td>納品重視</td><td>売上・マクアケ成功重視</td></tr>
+              <tr><td>💰 金額感（目安）</td><td>トータル100万〜300万超（+保守費）</td><td>段階選択式（初期10〜30万＋月額3〜30万）</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size: 0.9em; line-height: 1.4; max-width: 800px;">
+          <p>外注は「制作費＋初期設計＋運用」で金額が膨らみがちです。</p>
+          <p>私たちの支援は「選べる＋分かりやすい＋結果直結」な価格構成となっています。</p>
+          <p>特に「月額サブスク型支援」で初期負担を抑えられるのが強みです。</p>
+        </div>
+        <p style="margin-top: 1em; font-weight: bold;">≫ 結論：私たちの支援は「実行までつなげる戦略型伴走」</p>
       </section>
       <section>
         <h2>年間スケジュール グラフ</h2> <iframe src="timeline.html"
@@ -152,65 +181,6 @@
           <li>次年度のルーティーンカレンダー策定</li>
         </ul>
       </section>
-
-      <section>
-        <h2>支援スタイル比較チャート</h2>
-        <table style="font-size: 0.8em; width: 100%; margin-bottom: 1em;">
-          <thead>
-            <tr>
-              <th>項目</th>
-              <th>一般的な外注</th>
-              <th>私たちの支援</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>戦略設計</td>
-              <td>基本なし</td>
-              <td>ゴールから逆算して提案</td>
-            </tr>
-            <tr>
-              <td>業務の範囲</td>
-              <td>パーツ単位で分断</td>
-              <td>EC〜SNS〜資料まで一貫対応</td>
-            </tr>
-            <tr>
-              <td>提案内容</td>
-              <td>デザイン・実装中心</td>
-              <td>市場設計＋価格設計まで</td>
-            </tr>
-            <tr>
-              <td>継続運用</td>
-              <td>別契約・高額</td>
-              <td>ノーコード活用＋自走型構築</td>
-            </tr>
-            <tr>
-              <td>モチベーション</td>
-              <td>クライアント任せ</td>
-              <td>クライアントを動機づける</td>
-            </tr>
-            <tr>
-              <td>成果志向</td>
-              <td>納品重視</td>
-              <td>売上・マクアケ成功重視</td>
-            </tr>
-            <tr>
-              <td>💰 金額感（目安）</td>
-              <td>トータル100万〜300万超（+保守費）</td>
-              <td>段階選択式（初期10〜30万＋月額3〜30万）</td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="font-size: 0.9em; line-height: 1.4; max-width: 800px;">
-          <p>外注は「制作費＋初期設計＋運用」で金額が膨らみがちです。</p>
-          <p>私たちの支援は「選べる＋分かりやすい＋結果直結」な価格構成となっています。</p>
-          <p>特に「月額サブスク型支援」で初期負担を抑えられるのが強みです。</p>
-        </div>
-        <p style="margin-top: 1em; font-weight: bold;">
-          ≫ 結論：私たちの支援は「実行までつなげる戦略型伴走」
-        </p>
-      </section>
-
       <section>
         <h2>クラファン ランキング</h2>
         <iframe src="../ranking.html" style="width:100%; height:600px; border:none; background:white;"></iframe>

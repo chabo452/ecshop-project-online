@@ -1,48 +1,115 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Reveal.js プレゼンテーション</title>
 
-		<title>reveal.js</title>
+  <!-- reveal.js CSS -->
+  <link rel="stylesheet" href="../reveal.js/dist/reset.css" />
+  <link rel="stylesheet" href="../reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="../reveal.js/dist/theme/black.css" />
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <!-- ハイライト用テーマ -->
+  <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css" />
+</head>
+<body>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
-		</div>
+  <div class="reveal">
+    <div class="slides">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      <!-- スライド 1 -->
+      <section>
+        <h2>Slide 1</h2>
+        <p>ここは最初のスライドです。</p>
+      </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+      <!-- スライド 2（支援スタイル比較チャート） -->
+      <section>
+        <h2>支援スタイル比較チャート</h2>
+
+        <table style="font-size: 0.8em; width: 100%; margin-bottom: 1em;">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>一般的な外注</th>
+              <th>私たちの支援</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>戦略設計</td>
+              <td>基本なし</td>
+              <td>ゴールから逆算して提案</td>
+            </tr>
+            <tr>
+              <td>業務の範囲</td>
+              <td>パーツ単位で分断</td>
+              <td>EC〜SNS〜資料まで一貫対応</td>
+            </tr>
+            <tr>
+              <td>提案内容</td>
+              <td>デザイン・実装中心</td>
+              <td>市場設計＋価格設計まで</td>
+            </tr>
+            <tr>
+              <td>継続運用</td>
+              <td>別契約・高額</td>
+              <td>ノーコード活用＋自走型構築</td>
+            </tr>
+            <tr>
+              <td>モチベーション</td>
+              <td>クライアント任せ</td>
+              <td>クライアントを動機づける</td>
+            </tr>
+            <tr>
+              <td>成果志向</td>
+              <td>納品重視</td>
+              <td>売上・マクアケ成功重視</td>
+            </tr>
+            <tr>
+              <td>💰 金額感（目安）</td>
+              <td>トータル100万〜300万超（+保守費）</td>
+              <td>段階選択式（初期10〜30万＋月額3〜30万）</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="font-size: 0.9em; line-height: 1.4; max-width: 800px;">
+          <p>外注は「制作費＋初期設計＋運用」で金額が膨らみがちです。</p>
+          <p>私たちの支援は「選べる＋分かりやすい＋結果直結」な価格構成となっています。</p>
+          <p>特に「月額サブスク型支援」で初期負担を抑えられるのが強みです。</p>
+        </div>
+
+        <p style="margin-top: 1em; font-weight: bold;">
+          ≫ 結論：私たちの支援は「実行までつなげる戦略型伴走」
+        </p>
+
+        <aside class="notes">
+          <p>このチャートは、一般的な外注と私たちの支援の違いを強調するものです。</p>
+          <p>外注は費用も高く、各業務が分断されがちですが、私たちは一貫対応をします。</p>
+          <p>成果志向（マクアケでの成功、売上向上など）や、クライアントの動機づけ支援も強みです。</p>
+          <p>また、「段階選択式」「月額型」により、費用面の透明性と負担軽減が可能です。</p>
+          <p>この差異をはっきり伝えることで、信頼感と納得感につながります。</p>
+        </aside>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- reveal.js のJSを読み込み -->
+  <script src="../reveal.js/dist/reveal.js"></script>
+  <script src="../reveal.js/plugin/notes/notes.js"></script>
+  <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="../reveal.js/plugin/highlight/highlight.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+
+</body>
 </html>
